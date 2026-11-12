@@ -1,0 +1,36 @@
+include: package:flutter_lints/flutter.yaml
+
+analyzer:
+  exclude:
+    - "**/*.g.dart"
+    - "**/*.freezed.dart"
+    - "**/*.mocks.dart"
+    - "build/**"
+  errors:
+    invalid_annotation_target: ignore
+    todo: ignore
+
+formatter:
+  page_width: 80
+  trailing_commas: preserve
+
+linter:
+  rules:
+    - always_declare_return_types
+    - always_put_required_named_parameters_first
+    - avoid_print
+    - avoid_unnecessary_containers
+    - avoid_web_libraries_in_flutter
+    - directives_ordering
+    - prefer_const_constructors
+    - prefer_const_declarations
+    - prefer_const_literals_to_create_immutables
+    - prefer_final_fields
+    - prefer_final_locals
+    - prefer_single_quotes
+    - require_trailing_commas
+    - sized_box_for_whitespace
+    - sort_child_properties_last
+    - unnecessary_lambdas
+    - use_key_in_widget_constructors
+    - use_super_parameters
