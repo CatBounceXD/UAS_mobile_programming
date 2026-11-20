@@ -47,10 +47,10 @@ class UserModel {
   factory UserModel.fromJson(Map<String, dynamic> json, String id) {
     return UserModel(
       uid: id,
-      name: json['name'] ?? '',
-      gender: json['gender'] ?? '',
+      name: json['name'],
+      gender: json['gender'],
       dob: (json['dob'] as Timestamp?)?.toDate() ?? DateTime.now(),
-      photos: List<String>.from(json['photos'] ?? []),
+      photos: List<String>.from(json['photos']),
       isVerified: json['isVerified'] ?? false,
       interests: List<String>.from(json['interests'] ?? []),
       favInterest: json['favInterest'] ?? '',
