@@ -1,8 +1,16 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-// Sesuaikan path import ini dengan struktur foldermu
-import 'features/navigation/views/main_navigation_screen.dart'; 
+import 'package:uas/features/navigation/views/main_navigation_screen.dart';
 
-void main() {
+import 'firebase_options.dart';
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+
   runApp(const MyApp());
 }
 
@@ -12,12 +20,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Bumble Clone',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        primarySwatch: Colors.pink,
-        scaffoldBackgroundColor: Colors.white,
-      ),
+      title: 'Bumble Clone',
+      theme: ThemeData(primarySwatch: Colors.pink),
       home: const MainNavigationScreen(),
     );
   }
