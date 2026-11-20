@@ -56,7 +56,7 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
             label: 'People',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.heart_broken),
+            icon: Icon(Icons.favorite),
             label: 'Liked You',
           ),
           BottomNavigationBarItem(
